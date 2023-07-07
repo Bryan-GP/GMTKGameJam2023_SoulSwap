@@ -12,31 +12,19 @@ public class Soul : MonoBehaviour
     public GameObject[] enemyList;
     private float[] dist;
     public List<GameObject> enemies_in_range;
+    public GameObject Pointer;
+    public int index = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+ 
 
     //soul swap:
     //while holding down a button specifyed to soul swap  --y
     //choose an enemy that you want to soul swap to, they cant swap to a soul which is of the same colour, and they can change to a body of any colour when just a souly  --n
     //when swapped this script should be impelemted into thier object which overrides their own script --n
   
-    
-
-    // Update is called once per frame
-    void Update()
+    public void getEnemies()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            swapping = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.S))
-        {
-            swapping = false;
-        }
         while (swapping)
         {
             try
@@ -52,10 +40,42 @@ public class Soul : MonoBehaviour
                     }
                 }
             }
-            catch(NullReferenceException x)
+            catch (NullReferenceException x)
             {
-                print(x.Message);
+                Debug.Log(x.Message);
             }
         }
+    }
+    
+
+    public void choose_enemy(int index)
+    {
+
+        Pointer.transform.position = enemies_in_range[index].transform.position;
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            swapping = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            swapping = false;
+        }
+        getEnemies();
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            index -= 1;
+        }
+        else if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            index += 1;
+        }
+
     }
 }
