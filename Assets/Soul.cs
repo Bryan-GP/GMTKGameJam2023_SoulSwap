@@ -10,9 +10,11 @@ public class Soul : MonoBehaviour
     public bool swapping;
     public float range;
     public GameObject[] enemyList;
-    private float[] dist;
+    public float[] dist;
     public List<GameObject> enemies_in_range;
     public GameObject Pointer;
+    public GameObject chosenEnemy;
+    public GameObject preivousSelf;
     public int index = 0;
 
 
@@ -52,6 +54,11 @@ public class Soul : MonoBehaviour
     {
 
         Pointer.transform.position = enemies_in_range[index].transform.position;
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            chosenEnemy = enemies_in_range[index];
+        }
+
 
 
     }
@@ -79,3 +86,10 @@ public class Soul : MonoBehaviour
 
     }
 }
+
+
+/*
+        //Destroy(Soul)
+        //chosenentity.AddComponent<ai>();
+        //chosenentity.AddComponent<Soul>();
+*/

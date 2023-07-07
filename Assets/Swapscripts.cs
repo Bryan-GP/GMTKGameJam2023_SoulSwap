@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Swapscripts : MonoBehaviour
 {
-    public GameObject chosenentity = null;
-    public GameObject preivousentity = null;
+    public GameObject chooseEnemy = null;
+    public GameObject preivousSelf = null;
 
     // this script will take in the gameobject and switch its selected scripts
     //still need to add ai script
