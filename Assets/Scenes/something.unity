@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 484880869}
   - component: {fileID: 484880874}
   - component: {fileID: 484880873}
+  - component: {fileID: 484880875}
   m_Layer: 0
   m_Name: MainSoul
   m_TagString: Player
@@ -261,10 +262,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swapping: 0
-  range: 5
+  range: 1000
   enemyList: []
   dist: []
-  enemies_in_range: []
+  enemies_in_range1: []
+  enemies_in_range2: []
   Pointer: {fileID: 1887344549}
   chosenEnemy: {fileID: 0}
   preivousSelf: {fileID: 484880868}
@@ -277,8 +279,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484880868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.55, y: 0.0022, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.5444, y: -0.0034, z: 0}
+  m_LocalScale: {x: 1.0113, y: 1.0113, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -326,6 +328,18 @@ MonoBehaviour:
   movespeed: 5
   rb: {fileID: 484880873}
   animator: {fileID: 484880870}
+--- !u!114 &484880875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484880868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4385128c56ca3408292858f87e7a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1414674893
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +443,7 @@ GameObject:
   - component: {fileID: 1539467203}
   - component: {fileID: 1539467205}
   - component: {fileID: 1539467204}
+  - component: {fileID: 1539467206}
   m_Layer: 0
   m_Name: EnemyRed
   m_TagString: Enemy
@@ -518,7 +533,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -530,6 +545,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &1539467206
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539467202}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e423adee1171414190a47e8b8b0e816, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1709872753
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +688,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
