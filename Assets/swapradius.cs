@@ -9,7 +9,7 @@ public class swapradius : MonoBehaviour
     public float range;
     public GameObject[] enemyList;
     public float[] dist;
-    public List<Collider2D> enemies_in_range;
+    public List<GameObject> enemies_in_range;
     public GameObject Pointer;
     public GameObject chosenEnemy;
     public GameObject preivousSelf;
@@ -28,17 +28,18 @@ public class swapradius : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision);
-        if (collision.tag == "Enemy")
+        
+        
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            enemies_in_range.Insert(-1,collision);
+            enemies_in_range.Add(collision.gameObject);
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log(collision);
-        if (collision.tag == "Enemy")
+
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Real");
         }
