@@ -11,7 +11,7 @@ public class swapradius : MonoBehaviour
     public GameObject[] enemyList;
     public List<GameObject> enemies_in_range;
     public Collider2D radius;
-    private GameObject enemysoul;
+    private GameObject enemy;
     //public GameObject pointer;
     //public GameObject chosen;
 
@@ -43,9 +43,10 @@ public class swapradius : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             Debug.Log(enemies_in_range);
-            enemysoul = enemies_in_range[index];
+            enemy = enemies_in_range[index];
+            enemy.SetActive(true);
+            GameObject enemysoul = enemy.transform.GetChild(0).gameObject;
             enemysoul.SetActive(true);
-
             Debug.Log(enemysoul.activeSelf);
             Time.timeScale = 1f;
 
