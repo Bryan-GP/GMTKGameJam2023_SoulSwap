@@ -12,10 +12,16 @@ public class swapradius : MonoBehaviour
     public List<GameObject> enemies_in_range;
     public Collider2D radius;
     private GameObject enemy;
-    //public GameObject pointer;
-    //public GameObject chosen;
+    public GameObject camera;
 
     public int index = 0;
+
+
+
+    public void changeCam()
+    {
+        
+    }
 
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -42,15 +48,17 @@ public class swapradius : MonoBehaviour
         //enemies_in_range[index].transform.position;
         if (Input.GetKeyDown(KeyCode.P))
         {
-            Debug.Log(enemies_in_range);
+            //Debug.Log(enemies_in_range);
             enemy = enemies_in_range[index];
-            enemy.SetActive(true);
             GameObject enemysoul = enemy.transform.GetChild(0).gameObject;
             enemysoul.SetActive(true);
-            Debug.Log(enemysoul.activeSelf);
+            //Debug.Log(enemysoul.activeSelf);
             GameObject myGameObject = this.gameObject;
             myGameObject.SetActive(false);
             Time.timeScale = 1f;
+            enemy.SetActive(true);
+            
+            
 
         }
 
@@ -61,20 +69,20 @@ public class swapradius : MonoBehaviour
     {
         if (Time.timeScale == 0.05f)
         {
-            Debug.Log("part1"); 
-            Debug.Log(enemies_in_range);
+            //Debug.Log("part1"); 
+            //Debug.Log(enemies_in_range);
            
             if (Input.GetKeyUp(KeyCode.Q) && index >= 1)
             {
                 index -= 1;
-                Debug.Log("part2" + enemies_in_range);
+                //Debug.Log("part2" + enemies_in_range);
                 
                 
             }
             else if (Input.GetKeyUp(KeyCode.E) && index < enemies_in_range.Count-1)
             {
                 index += 1;
-                Debug.Log("part2" + enemies_in_range);
+                //Debug.Log("part2" + enemies_in_range);
                 
             }
             chooseBody();

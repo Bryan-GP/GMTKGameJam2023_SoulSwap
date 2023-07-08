@@ -233,10 +233,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821969c4117961347812fea416306680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  now: {fileID: 0}
   enemyList: []
   enemies_in_range: []
   radius: {fileID: 110951349}
-  pointer: {fileID: 0}
+  camera: {fileID: 0}
   index: 0
 --- !u!1 &188193562
 GameObject:
@@ -478,10 +479,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821969c4117961347812fea416306680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  now: {fileID: 0}
   enemyList: []
   enemies_in_range: []
   radius: {fileID: 411620641}
-  pointer: {fileID: 0}
+  camera: {fileID: 0}
   index: 0
 --- !u!1 &484880868
 GameObject:
@@ -756,10 +758,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821969c4117961347812fea416306680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  now: {fileID: 0}
   enemyList: []
   enemies_in_range: []
   radius: {fileID: 1278653636}
-  pointer: {fileID: 0}
+  camera: {fileID: 0}
   index: 0
 --- !u!114 &1278653638
 MonoBehaviour:
