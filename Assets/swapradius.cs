@@ -14,28 +14,21 @@ public class swapradius : MonoBehaviour
     private GameObject enemy;
     private GameObject parent;
 
-    public GameObject camera;
+    //public GameObject camera;
 
     private Animator enemyanimator;
     //public GameObject pointer;
     //public GameObject chosen;
 
-
     public int index = 0;
-
-
-
-    public void changeCam()
-    {
-
-    }
+    //public void changeCam()
+    //{
+    //}
 
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-
-
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("RedEnemy") || collision.gameObject.CompareTag("BlueEnemy"))
         {
             enemies_in_range.Add(collision.gameObject);
         }
@@ -44,7 +37,7 @@ public class swapradius : MonoBehaviour
     void OnTriggerExit2D(Collider2D collision)
     {
 
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("RedEnemy") || collision.gameObject.CompareTag("BlueEnemy"))
         {
             if (enemies_in_range.Count > 0)
             {

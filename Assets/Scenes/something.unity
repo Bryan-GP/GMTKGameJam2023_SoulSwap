@@ -240,7 +240,6 @@ MonoBehaviour:
   enemyList: []
   enemies_in_range: []
   radius: {fileID: 110951349}
-  camera: {fileID: 0}
   index: 0
 --- !u!212 &110951351
 SpriteRenderer:
@@ -593,7 +592,6 @@ MonoBehaviour:
   enemyList: []
   enemies_in_range: []
   radius: {fileID: 411620641}
-  camera: {fileID: 0}
   index: 0
 --- !u!212 &411620643
 SpriteRenderer:
@@ -927,7 +925,6 @@ MonoBehaviour:
   enemyList: []
   enemies_in_range: []
   radius: {fileID: 1278653636}
-  camera: {fileID: 0}
   index: 0
 --- !u!114 &1278653638
 MonoBehaviour:
@@ -1152,9 +1149,10 @@ GameObject:
   - component: {fileID: 1539467204}
   - component: {fileID: 1539467206}
   - component: {fileID: 1539467207}
+  - component: {fileID: 1539467208}
   m_Layer: 0
   m_Name: EnemyRed
-  m_TagString: Enemy
+  m_TagString: RedEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1320,6 +1318,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.22, y: 5.48}
   m_EdgeRadius: 0
+--- !u!114 &1539467208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539467202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78487a51ebf1fa1449e51947d49a5329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
 --- !u!1 &1709872753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,9 +1344,10 @@ GameObject:
   - component: {fileID: 1709872756}
   - component: {fileID: 1709872757}
   - component: {fileID: 1709872758}
+  - component: {fileID: 1709872759}
   m_Layer: 0
   m_Name: EnemyBlue
-  m_TagString: Enemy
+  m_TagString: BlueEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1501,3 +1513,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.82, y: 3.72}
   m_EdgeRadius: 0
+--- !u!114 &1709872759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709872753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b007105ba5cc39248a09cffa04b972c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
