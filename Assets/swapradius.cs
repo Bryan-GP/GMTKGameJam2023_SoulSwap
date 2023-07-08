@@ -75,11 +75,14 @@ public class swapradius : MonoBehaviour
     {
         if (Time.timeScale == 0.10f)
         {
-            enemy = enemies_in_range[index];
-            enemyanimator = enemy.GetComponent<Animator>();
-            enemyanimator.SetBool("swapping", true);
+            if (enemies_in_range.Count > 0)
+            {
+                enemy = enemies_in_range[index];
+                enemyanimator = enemy.GetComponent<Animator>();
+                enemyanimator.SetBool("swapping", true);
 
-            chooseBody(enemy);
+                chooseBody(enemy);
+            }
         } 
         else
         {
