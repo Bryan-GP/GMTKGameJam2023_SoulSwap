@@ -17,8 +17,9 @@ public class PlayerMove : MonoBehaviour
         //inputs
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("speed", movement.sqrMagnitude);
+        //animator.SetFloat("Horizontal", movement.x);
+        //animator.SetFloat("Vertical", movement.y);
+        //animator.SetFloat("speed", movement.sqrMagnitude);
 
     }
 
