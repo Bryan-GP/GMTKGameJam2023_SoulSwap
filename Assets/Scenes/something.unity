@@ -168,7 +168,6 @@ GameObject:
   - component: {fileID: 484880869}
   - component: {fileID: 484880874}
   - component: {fileID: 484880873}
-  - component: {fileID: 484880875}
   - component: {fileID: 484880876}
   m_Layer: 0
   m_Name: MainSoul
@@ -321,18 +320,6 @@ MonoBehaviour:
   movespeed: 5
   rb: {fileID: 484880873}
   animator: {fileID: 484880870}
---- !u!114 &484880875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484880868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4385128c56ca3408292858f87e7a0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &484880876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +336,37 @@ MonoBehaviour:
   enemies_in_range: []
   Pointer: {fileID: 0}
   chosenEnemy: {fileID: 0}
+--- !u!1 &855431347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 855431348}
+  m_Layer: 0
+  m_Name: 'TRUSS ME BRO '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &855431348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855431347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.360203, y: 0.542774, z: -0.10580238}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1278653634
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +450,7 @@ MonoBehaviour:
   enemyList: []
   enemies_in_range: []
   radius: {fileID: 1278653636}
+  index: 0
 --- !u!1 &1414674893
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +487,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
