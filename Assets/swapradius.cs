@@ -35,7 +35,7 @@ public class swapradius : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Real");
+            enemies_in_range.Remove(collision.gameObject);
         }
     }
 }
