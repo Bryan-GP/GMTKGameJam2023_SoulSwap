@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 484880874}
   - component: {fileID: 484880873}
   - component: {fileID: 484880875}
+  - component: {fileID: 484880876}
   m_Layer: 0
   m_Name: MainSoul
   m_TagString: Player
@@ -262,13 +263,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swapping: 0
-  range: 1000
-  enemyList: []
-  dist: []
-  enemies_in_range1: []
-  enemies_in_range2: []
-  chosenEnemy: {fileID: 0}
-  preivousSelf: {fileID: 484880868}
 --- !u!4 &484880872
 Transform:
   m_ObjectHideFlags: 0
@@ -339,6 +333,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4385128c56ca3408292858f87e7a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &484880876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484880868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa73539d3e08c3e4b8e6d92fc009b0d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  enemies_in_range: []
+  Pointer: {fileID: 0}
+  chosenEnemy: {fileID: 0}
 --- !u!1 &1278653634
 GameObject:
   m_ObjectHideFlags: 0
