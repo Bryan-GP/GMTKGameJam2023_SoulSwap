@@ -73,11 +73,11 @@ public class swapradius : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale == 0.05f)
+        if (Time.timeScale == 0.10f)
         {
-                enemy = enemies_in_range[index];
-                enemyanimator = enemy.GetComponent<Animator>();
-                enemyanimator.SetBool("swapping", true);
+            enemy = enemies_in_range[index];
+            enemyanimator = enemy.GetComponent<Animator>();
+            enemyanimator.SetBool("swapping", true);
 
            
                 
@@ -104,7 +104,17 @@ public class swapradius : MonoBehaviour
 
             }
             chooseBody(enemy);
-        }  
+        } 
+        else
+        {
+
+            if (enemies_in_range.Count > 0)
+            {
+                enemy = enemies_in_range[index];
+                enemyanimator = enemy.GetComponent<Animator>();
+                enemyanimator.SetBool("swapping", false);
+            }
+        }
          
 
         
