@@ -12,6 +12,7 @@ public class swapradius : MonoBehaviour
     public List<GameObject> enemies_in_range;
     public Collider2D radius;
     private GameObject enemy;
+    private GameObject parent;
 
     public GameObject camera;
 
@@ -59,12 +60,18 @@ public class swapradius : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
+            parent = this.transform.parent.gameObject;
             enemyanimator.SetBool("swapping", false);
             GameObject enemysoul = enemy.transform.GetChild(0).gameObject;
             enemysoul.SetActive(true);
             //Debug.Log(enemysoul.activeSelf);
             GameObject myGameObject = this.gameObject;
             myGameObject.SetActive(false);
+            //deactivates if its mainsoul
+            if (parent.name == "MainSoul")
+            {
+                parent.SetActive(false);
+            }
             Time.timeScale = 1f;
 
             enemy.SetActive(true);
