@@ -12,7 +12,13 @@ public class swapradius : MonoBehaviour
     public List<GameObject> enemies_in_range;
     public Collider2D radius;
     private GameObject enemy;
+
     public GameObject camera;
+
+    private Animator enemyanimator;
+    //public GameObject pointer;
+    //public GameObject chosen;
+
 
     public int index = 0;
 
@@ -20,14 +26,14 @@ public class swapradius : MonoBehaviour
 
     public void changeCam()
     {
-        
+
     }
 
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        
+
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
             enemies_in_range.Add(collision.gameObject);
@@ -43,22 +49,22 @@ public class swapradius : MonoBehaviour
         }
     }
 
-    public void chooseBody()
+    public void chooseBody(GameObject enemy)
     {
-        //enemies_in_range[index].transform.position;
         if (Input.GetKeyDown(KeyCode.P))
         {
-            //Debug.Log(enemies_in_range);
-            enemy = enemies_in_range[index];
+            enemyanimator.SetBool("swapping", false);
             GameObject enemysoul = enemy.transform.GetChild(0).gameObject;
             enemysoul.SetActive(true);
             //Debug.Log(enemysoul.activeSelf);
             GameObject myGameObject = this.gameObject;
             myGameObject.SetActive(false);
             Time.timeScale = 1f;
+
             enemy.SetActive(true);
-            
-            
+
+
+
 
         }
 
@@ -69,24 +75,37 @@ public class swapradius : MonoBehaviour
     {
         if (Time.timeScale == 0.05f)
         {
-            //Debug.Log("part1"); 
-            //Debug.Log(enemies_in_range);
+                enemy = enemies_in_range[index];
+                enemyanimator = enemy.GetComponent<Animator>();
+                enemyanimator.SetBool("swapping", true);
+
            
+                
+                
+
             if (Input.GetKeyUp(KeyCode.Q) && index >= 1)
             {
-                index -= 1;
-                //Debug.Log("part2" + enemies_in_range);
-                
-                
+                    enemyanimator.SetBool("swapping", false);
+                    index -= 1;
+                    Debug.Log("part2" + enemies_in_range);
+                    enemy = enemies_in_range[index];
+                    enemyanimator.SetBool("swapping", true);
+
+
             }
-            else if (Input.GetKeyUp(KeyCode.E) && index < enemies_in_range.Count-1)
+            else if (Input.GetKeyUp(KeyCode.E) && index < enemies_in_range.Count - 1)
             {
-                index += 1;
-                //Debug.Log("part2" + enemies_in_range);
-                
+                    enemyanimator.SetBool("swapping", false);
+                    index += 1;
+                    Debug.Log("part2" + enemies_in_range);
+                    enemy = enemies_in_range[index];
+                    enemyanimator = enemy.GetComponent<Animator>();
+                    enemyanimator.SetBool("swapping", true);
+
             }
-            chooseBody();
+            chooseBody(enemy);
         }
 
+        
     }
 }
