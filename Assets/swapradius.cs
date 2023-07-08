@@ -79,30 +79,6 @@ public class swapradius : MonoBehaviour
             enemyanimator = enemy.GetComponent<Animator>();
             enemyanimator.SetBool("swapping", true);
 
-           
-                
-                
-
-            if (Input.GetKeyUp(KeyCode.Q) && index >= 1)
-            {
-                    enemyanimator.SetBool("swapping", false);
-                    index -= 1;
-                    Debug.Log("part2" + enemies_in_range);
-                    enemy = enemies_in_range[index];
-                    enemyanimator.SetBool("swapping", true);
-
-
-            }
-            else if (Input.GetKeyUp(KeyCode.E) && index < enemies_in_range.Count - 1)
-            {
-                    enemyanimator.SetBool("swapping", false);
-                    index += 1;
-                    Debug.Log("part2" + enemies_in_range);
-                    enemy = enemies_in_range[index];
-                    enemyanimator = enemy.GetComponent<Animator>();
-                    enemyanimator.SetBool("swapping", true);
-
-            }
             chooseBody(enemy);
         } 
         else
