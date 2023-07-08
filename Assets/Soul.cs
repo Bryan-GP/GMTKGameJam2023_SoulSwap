@@ -9,7 +9,7 @@ using UnityEngine.Rendering;
 public class Soul : MonoBehaviour
 {
 
-
+    public Animator animator;
     public bool swapping;
     //soul swap:
     //while holding down a button specifyed to soul swap  --y
@@ -21,12 +21,14 @@ public class Soul : MonoBehaviour
         {
             swapping = true;
             Time.timeScale = 0.10f;
+            animator.SetBool("swapping", true);
   
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             swapping = false;
             Time.timeScale = 1f;
+            animator.SetBool("swapping", false);
         }
     }
 }
