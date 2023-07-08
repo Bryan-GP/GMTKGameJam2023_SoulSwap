@@ -312,7 +312,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484880868}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f9ffec66fe3c764e8967e576696db38, type: 3}
   m_Name: 
@@ -555,6 +555,7 @@ GameObject:
   - component: {fileID: 1539467205}
   - component: {fileID: 1539467204}
   - component: {fileID: 1539467206}
+  - component: {fileID: 1539467208}
   - component: {fileID: 1539467207}
   m_Layer: 0
   m_Name: EnemyRed
@@ -713,6 +714,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.59, y: 0.16}
   m_Size: {x: 2.01, y: 6.09}
   m_Direction: 0
+--- !u!114 &1539467208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539467202}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9ffec66fe3c764e8967e576696db38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movespeed: 5
+  rb: {fileID: 1539467205}
+  animator: {fileID: 1539467206}
 --- !u!1 &1709872753
 GameObject:
   m_ObjectHideFlags: 0
