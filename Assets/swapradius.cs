@@ -5,15 +5,9 @@ using UnityEngine;
 public class swapradius : MonoBehaviour
 {
 
-    public bool swapping;
-    public float range;
+    
     public GameObject[] enemyList;
-    public float[] dist;
     public List<GameObject> enemies_in_range;
-    public GameObject Pointer;
-    public GameObject chosenEnemy;
-    public GameObject preivousSelf;
-    public int index = 0;
     public Collider2D radius;
 
     
