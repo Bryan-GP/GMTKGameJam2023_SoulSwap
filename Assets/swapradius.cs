@@ -45,6 +45,12 @@ public class swapradius : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            if (enemies_in_range.Count > 0)
+            {
+                enemy = enemies_in_range[index];
+                enemyanimator = enemy.GetComponent<Animator>();
+                enemyanimator.SetBool("swapping", false);
+            }
             enemies_in_range.Remove(collision.gameObject);
         }
     }
