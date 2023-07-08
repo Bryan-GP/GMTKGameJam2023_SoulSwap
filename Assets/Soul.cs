@@ -22,7 +22,7 @@ public class Soul : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             swapping = true;
-            Time.timeScale = 0f;
+            Time.timeScale = 0.05f;
   
         }
         else if (Input.GetKeyUp(KeyCode.Space))

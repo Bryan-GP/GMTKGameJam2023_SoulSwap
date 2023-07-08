@@ -30,13 +30,13 @@ public class Swapscripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale == 0f)
+        if (Time.timeScale == 0.05f)
         {
-            if (Input.GetKeyUp(KeyCode.LeftArrow))
+            if (Input.GetKeyUp(KeyCode.Q))
             {
                 index -= 1;
             }
-            else if (Input.GetKeyUp(KeyCode.RightArrow))
+            else if (Input.GetKeyUp(KeyCode.E))
             {
                 index += 1;
             }
