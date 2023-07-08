@@ -1,20 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class Swapscripts : MonoBehaviour
 {
-    public GameObject chooseEnemy = null;
-    public GameObject preivousSelf = null;
 
-    // this script will take in the gameobject and switch its selected scripts
-    //still need to add ai script
+    public int index = 0;
+    public GameObject[] enemies_in_range;
+    public GameObject Pointer;
+    public GameObject chosenEnemy;
     public void addsoulscript()
     {
-        //Destroy(Soul)
-        //chosenentity.AddComponent<ai>();
-        //chosenentity.AddComponent<Soul>();
-
+        if (index > enemies_in_range.Length || enemies_in_range.Length < 1)
+        {
+            return;
+        }
+        Pointer.transform.position = enemies_in_range[index].transform.position;
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            chosenEnemy = enemies_in_range[index];
+        }
 
     }
 
@@ -23,6 +30,17 @@ public class Swapscripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0f)
+        {
+            if (Input.GetKeyUp(KeyCode.LeftArrow))
+            {
+                index -= 1;
+            }
+            else if (Input.GetKeyUp(KeyCode.RightArrow))
+            {
+                index += 1;
+            }
+        }
         
     }
 }
