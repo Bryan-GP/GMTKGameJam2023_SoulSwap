@@ -48,6 +48,8 @@ public class swapradius : MonoBehaviour
             GameObject enemysoul = enemy.transform.GetChild(0).gameObject;
             enemysoul.SetActive(true);
             Debug.Log(enemysoul.activeSelf);
+            GameObject myGameObject = this.gameObject;
+            myGameObject.SetActive(false);
             Time.timeScale = 1f;
 
         }
