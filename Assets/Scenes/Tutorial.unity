@@ -5813,7 +5813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 190}
+  m_AnchoredPosition: {x: -200, y: 210}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34261784
@@ -6241,7 +6241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0.06, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: -100}
+  m_AnchoredPosition: {x: -210, y: -100}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134239716
@@ -6508,7 +6508,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fe1e7351ce367334f94c0c9370354380, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6877,6 +6877,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1173807036237937791, guid: 7240a17a7f5c0564bb0877591c6ec613, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2788651232355166213, guid: 7240a17a7f5c0564bb0877591c6ec613, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -6895,7 +6899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9030997259214686834, guid: 7240a17a7f5c0564bb0877591c6ec613, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.0522213
+      value: -4.92
       objectReference: {fileID: 0}
     - target: {fileID: 9030997259214686834, guid: 7240a17a7f5c0564bb0877591c6ec613, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6998,7 +7002,7 @@ GameObject:
   - component: {fileID: 2139311376}
   - component: {fileID: 2139311375}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
