@@ -20,14 +20,14 @@ public class PlayerMove : MonoBehaviour
     public bool onGround = true;
     public bool isJumping = false;
 
-    Vector2 movement;
+    //Vector2 movement;
 
 
 
     
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (other.gameObject.CompareTag("ground"))
+        if (collider.gameObject.CompareTag("ground"))
         {
             Debug.Log("on floor");
             isJumping = false;
