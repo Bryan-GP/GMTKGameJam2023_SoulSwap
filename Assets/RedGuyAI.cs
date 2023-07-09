@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,22 +10,33 @@ public class RedGuyAI : MonoBehaviour
     //slow asf
     //strong asf
 
-    [SerializeField] float speed = 1f;
+    public float speed = 1f;
+    public float restspeed = 0.5f;
+    public float redGuyrange = 10f;
     Rigidbody2D rb;
-    //BoxCollider2D bc;
+    CircleCollider2D circle;
+    public List<GameObject> enemy;
+    public bool targetLock;
+    public GameObject enemyTarget;
+    [SerializeField] private int enemyIndex;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //bc = GetComponent<BoxCollider2D>();
+        circle = GetComponent<CircleCollider2D>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsRight())
+        if (enemy.Count < 0)
+        {
+            this.transform.localScale = new Vector2(-(Mathf.Sign(rb.velocity.x)), this.transform.localScale.y);  //this line is for flipping direction
+            rb.velocity = new Vector2(restspeed,rb.velocity.y);
+        }
+        if (IsRight() && targetLock )
         {
             rb.velocity = new Vector2(speed, 0f);
         }
@@ -32,16 +44,39 @@ public class RedGuyAI : MonoBehaviour
         {
             rb.velocity = new Vector2(-speed, 0f);
         }
-        
-    }
 
+    }
     private bool IsRight()
     {
-        return transform.localScale.x > Mathf.Epsilon;
+        return enemyTarget.transform.localScale.x > Mathf.Epsilon;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        transform.localScale = new Vector2(-(Mathf.Sign(rb.velocity.x)), transform.localScale.y);
-;    }
+        if (collision.gameObject.CompareTag("BlueEnemy"))
+        {
+            enemy.Add(collision.gameObject);
+            enemyIndex++;
+            enemyTarget = enemy[0];
+            targetLock = true;
+
+        }
+      
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("BlueEnemy"))
+        {
+            if (enemy.Count > 0)
+            {
+                enemy.Remove(collision.gameObject);
+                enemyIndex--;
+
+            }
+            
+        }
+    }
+
 }

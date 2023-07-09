@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2878754751403663516}
   - component: {fileID: 2855169131456082072}
   - component: {fileID: 1445425055031516413}
-  - component: {fileID: 1173807036237937791}
   - component: {fileID: 3487396349016418857}
   - component: {fileID: 8772688924418634611}
   m_Layer: 0
@@ -103,23 +102,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8772688924418634611}
   swapping: 0
---- !u!114 &1173807036237937791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590603330007723154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f9ffec66fe3c764e8967e576696db38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movespeed: 5
-  jumpspeed: 8
-  rb: {fileID: 1743825540638515352}
-  animator: {fileID: 5940337332008011489}
-  isJumping: 0
 --- !u!212 &3487396349016418857
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -227,7 +209,7 @@ Transform:
   m_Children:
   - {fileID: 7626336134170245504}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5940337332008011489
 Animator:
