@@ -303,6 +303,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 5
   jumpspeed: 8
+  jumpHeight: 10
+  acc: -9.8
+  upPressedTime: 0
+  upWindow: 2
+  fallGravityScale: 10
   rb: {fileID: 1709872757}
   animator: {fileID: 1709872756}
   isJumping: 0
@@ -558,7 +563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &228419869
 Transform:
   m_ObjectHideFlags: 0
@@ -704,6 +709,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 5
   jumpspeed: 8
+  jumpHeight: 10
+  acc: -9.8
+  upPressedTime: 0
+  upWindow: 2
+  fallGravityScale: 10
   rb: {fileID: 1539467205}
   animator: {fileID: 1539467206}
   isJumping: 0
@@ -9975,6 +9985,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1173807036237937791, guid: 7240a17a7f5c0564bb0877591c6ec613, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8300318001430351337, guid: 7240a17a7f5c0564bb0877591c6ec613, type: 3}
       propertyPath: m_Name
       value: MainSoul

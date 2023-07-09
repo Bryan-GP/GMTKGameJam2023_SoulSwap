@@ -13,17 +13,9 @@ public class swapradius : MonoBehaviour
     public Collider2D radius;
     private GameObject enemy;
     private GameObject parent;
-
-    //public GameObject camera;
-
     private Animator enemyanimator;
-    //public GameObject pointer;
-    //public GameObject chosen;
-
     public int index = 0;
-    //public void changeCam()
-    //{
-    //}
+   
 
 
     void OnTriggerEnter2D(Collider2D collision)
