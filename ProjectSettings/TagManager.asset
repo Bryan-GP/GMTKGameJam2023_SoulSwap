@@ -9,6 +9,7 @@ TagManager:
   - RedEnemy
   - BlueEnemy
   - ground
+  - UI Popup
   layers:
   - Default
   - TransparentFX
