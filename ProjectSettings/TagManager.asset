@@ -10,6 +10,7 @@ TagManager:
   - BlueEnemy
   - ground
   - UI Popup
+  - feet
   layers:
   - Default
   - TransparentFX

@@ -308,7 +308,6 @@ GameObject:
   - component: {fileID: 6920164522973709306}
   - component: {fileID: 6911640932839019681}
   - component: {fileID: 3187637018358021206}
-  - component: {fileID: 8984496553330241804}
   m_Layer: 0
   m_Name: EnemyBlue
   m_TagString: BlueEnemy
@@ -331,7 +330,7 @@ Transform:
   - {fileID: 420068143465770483}
   - {fileID: 8011054505477099421}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &56196500226410752
 SpriteRenderer:
@@ -478,19 +477,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.82, y: 3.72}
   m_EdgeRadius: 0
---- !u!114 &8984496553330241804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5909280920636339821}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b007105ba5cc39248a09cffa04b972c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!1 &8826834589449124518
 GameObject:
   m_ObjectHideFlags: 0
