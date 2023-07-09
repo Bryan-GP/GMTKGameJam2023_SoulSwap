@@ -21,9 +21,12 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * movespeed, rb.velocity.y );
+        float xdirection = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(xdirection  * movespeed, rb.velocity.y );
+        animator.SetFloat("Horizontal",xdirection );
         animator.SetFloat("speed", rb.velocity.sqrMagnitude);
-        if (Input.GetKeyDown(KeyCode.W))
+
+        if (Input.GetKeyDown(KeyCode.W) && !isJumping)
         {
             //rb.gravityScale = 
             float jumpForce = Mathf.Sqrt(jumpHeight * (Physics2D.gravity.y * rb.gravityScale) * -2) * rb.mass;
