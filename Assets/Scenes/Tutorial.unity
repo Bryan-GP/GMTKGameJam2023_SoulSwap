@@ -5836,7 +5836,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Space to Haunt
+  m_text: 'Press Space to Haunt
 
     (Haunt slows time)
 

@@ -24,7 +24,7 @@ public class Tutorial : MonoBehaviour
         }
 
        
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && showfirst == true)
         {
             showfirst = false;
             tagslist[0].SetActive(true);
