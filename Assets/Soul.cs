@@ -27,7 +27,7 @@ public class Soul : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             swapping = false;
-            Time.timeScale = 1f;
+            Time.timeScale = 2f;
             animator.SetBool("swapping", false);
         }
     }

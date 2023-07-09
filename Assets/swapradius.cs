@@ -77,7 +77,7 @@ public class swapradius : MonoBehaviour
             {
                 turnonai(enemy);
             }
-            Time.timeScale = 1f;
+            Time.timeScale = 2f;
 
             enemy.SetActive(true);
 
@@ -91,7 +91,7 @@ public class swapradius : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale == 0.10f)
+        if (Time.timeScale < 1)
         {
             if (enemies_in_range.Count > 0)
             {

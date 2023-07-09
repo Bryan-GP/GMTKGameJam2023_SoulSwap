@@ -23,7 +23,7 @@ public class PlayerMove : MonoBehaviour
         if (!PauseMenu.isPasued)
         {
             float xdirection = Input.GetAxisRaw("Horizontal");
-            rb.velocity = new Vector2(xdirection * movespeed, rb.velocity.y);
+            rb.velocity = new Vector2(xdirection * movespeed , rb.velocity.y);
             animator.SetFloat("Horizontal", xdirection);
             animator.SetFloat("speed", rb.velocity.sqrMagnitude);
 
