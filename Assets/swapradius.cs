@@ -15,8 +15,21 @@ public class swapradius : MonoBehaviour
     private GameObject parent;
     private Animator enemyanimator;
     public int index = 0;
-   
 
+
+    void turnoffai(GameObject enemy)
+    {
+        
+        GameObject enemyai = enemy.transform.GetChild(1).gameObject;
+        enemyai.SetActive(false);
+    }
+
+    void turnonai(GameObject enemy)
+    {
+        
+        GameObject enemyai = enemy.transform.GetChild(1).gameObject;
+        enemyai.SetActive(true);
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -52,10 +65,17 @@ public class swapradius : MonoBehaviour
             //Debug.Log(enemysoul.activeSelf);
             GameObject myGameObject = this.gameObject;
             myGameObject.SetActive(false);
+            turnoffai(enemy);
+
+
             //deactivates if its mainsoul
             if (parent.name == "MainSoul")
             {
                 parent.SetActive(false);
+            }
+            else
+            {
+                turnonai(enemy);
             }
             Time.timeScale = 1f;
 
