@@ -60,6 +60,11 @@ public class PlayerMove : MonoBehaviour
                 //cancel jump
                 rb.gravityScale = fallGravityScale;
             }
+            else
+            {
+                onGround = true;
+                isJumping = false;
+            }
         }
     }
 

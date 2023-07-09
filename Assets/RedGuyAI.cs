@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class RedGuyAI : MonoBehaviour
 {
+    //this guy can only move left and right and no jump
+    //goes after blues
+    //slow asf
+    //strong asf
 
     [SerializeField] float speed = 1f;
     Rigidbody2D rb;
