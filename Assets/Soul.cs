@@ -8,7 +8,7 @@ using UnityEngine.Rendering;
 
 public class Soul : MonoBehaviour
 {
-
+    
     public Animator animator;
     public bool swapping;
     //soul swap:
