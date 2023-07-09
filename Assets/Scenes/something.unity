@@ -304,12 +304,12 @@ MonoBehaviour:
   movespeed: 5
   jumpspeed: 8
   jumpHeight: 10
-  acc: -9.8
   upPressedTime: 0
   upWindow: 2
   fallGravityScale: 10
   rb: {fileID: 1709872757}
   animator: {fileID: 1709872756}
+  onGround: 1
   isJumping: 0
 --- !u!114 &110951348
 MonoBehaviour:
@@ -710,12 +710,12 @@ MonoBehaviour:
   movespeed: 5
   jumpspeed: 8
   jumpHeight: 10
-  acc: -9.8
   upPressedTime: 0
   upWindow: 2
   fallGravityScale: 10
   rb: {fileID: 1539467205}
   animator: {fileID: 1539467206}
+  onGround: 1
   isJumping: 0
 --- !u!114 &411620640
 MonoBehaviour:

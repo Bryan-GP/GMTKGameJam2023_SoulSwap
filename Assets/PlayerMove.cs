@@ -8,49 +8,62 @@ public class PlayerMove : MonoBehaviour
     public float movespeed = 1f;
     public float jumpspeed = 0.2f;
     public float jumpHeight = 10f;
-    public float acc = -9.8f;
+    //public float acc = -9.8f;
     public float upPressedTime;
     public float upWindow = 2f;
     public float fallGravityScale = 10f;
+
+
     public Rigidbody2D rb;
     public Animator animator;
-    
-    public bool isJumping;
+
+    public bool onGround = true;
+    public bool isJumping = false;
 
     Vector2 movement;
+
+
+
+    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("ground"))
+        {
+            Debug.Log("on floor");
+            isJumping = false;
+            onGround = true;
+        }
+    }
 
     void Update()
     {
         float xdirection = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(xdirection  * movespeed, rb.velocity.y );
-        animator.SetFloat("Horizontal",xdirection );
+        rb.velocity = new Vector2(xdirection * movespeed, rb.velocity.y);
+        animator.SetFloat("Horizontal", xdirection);
         animator.SetFloat("speed", rb.velocity.sqrMagnitude);
 
-        if (Input.GetKeyDown(KeyCode.W) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.W) && onGround && !isJumping)
         {
-            //rb.gravityScale = 
+            onGround = false;
+            isJumping = true;
+            rb.gravityScale = fallGravityScale;
             float jumpForce = Mathf.Sqrt(jumpHeight * (Physics2D.gravity.y * rb.gravityScale) * -2) * rb.mass;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            isJumping = true;
             upPressedTime = 0;
-        }
 
-        if( isJumping )
+        }
+        if (isJumping && !onGround)
         {
             upPressedTime += Time.deltaTime;
-            if(upPressedTime < upWindow && Input.GetKeyUp(KeyCode.W))
+            if (upPressedTime < upWindow && Input.GetKeyUp(KeyCode.W))
             {
                 //cancel jump
                 rb.gravityScale = fallGravityScale;
-            } 
-            if(rb.velocity.y < 0)
-            {
-                rb.gravityScale = fallGravityScale;
-                isJumping = false;
             }
         }
-        
     }
+
+}
 
     /*
     void Update()
@@ -102,6 +115,6 @@ public class PlayerMove : MonoBehaviour
 
     */
 
-}
+
 
 
